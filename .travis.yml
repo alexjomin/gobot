@@ -1,0 +1,13 @@
+language: go
+
+go:
+  - 1.6
+  - 1.7
+  - tip
+
+script:
+  - mkdir $GOPATH/bin
+  - curl https://glide.sh/get | sh
+  - glide install
+  - make test
+  - make all
