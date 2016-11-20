@@ -1,4 +1,4 @@
-# gobot
+# gobot ![status](https://api.travis-ci.org/alexjomin/gobot.svg?branch=master)
 
 ## Purpose
 
