@@ -1,0 +1,8 @@
+package: github.com/rapidloop/mybot
+import:
+- package: github.com/nlopes/slack
+  version: e595e9d8590a04ff76407e4e7d1791d25b095c66
+- package: golang.org/x/net
+  version: c46f265c325130a7a6c7b27db8c6fe14b64f1a68
+  subpackages:
+  - websocket
