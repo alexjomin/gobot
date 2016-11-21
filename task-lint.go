@@ -81,8 +81,18 @@ func taskLint(rtm *slack.RTM, ev *slack.MessageEvent, params []string) {
 			break
 		}
 	}
-	message := fmt.Sprintf(":checkered_flag: We are done, please find the results below. Found %d points", len(results))
-	rtm.PostMessage(ev.Channel, message, prm)
+
+	msg := "Well done ! All clear."
+
+	if len(results) > 0 {
+		msg = fmt.Sprintf(":checkered_flag: Done, please find the results below. Found %d points", len(results))
+	}
+
+	if len(results) > 10 {
+		msg = fmt.Sprintf("%s, only the 10 first one will be shown", msg)
+	}
+
+	rtm.PostMessage(ev.Channel, msg, prm)
 
 }
 
