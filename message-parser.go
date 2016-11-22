@@ -31,6 +31,7 @@ func parseMessage(content string) (task, []string, error) {
 		return taskHelp, args, nil
 	case "rules":
 		args = append(args, parts[1])
+		return taskRule, args, nil
 	}
 
 	return nil, args, errors.New("Can't parse message :" + content)
