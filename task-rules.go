@@ -24,7 +24,7 @@ var commit = []string{
 	"• chore: Changes to the build process or auxiliary tools and libraries such as documentation generation",
 	"```",
 	"",
-	"[See full convention here](https://github.com/conventional-changelog/conventional-changelog-angular/blob/master/convention.md)",
+	"https://github.com/conventional-changelog/conventional-changelog-angular/blob/master/convention.md",
 }
 
 func taskRule(rtm *slack.RTM, ev *slack.MessageEvent, params []string) {

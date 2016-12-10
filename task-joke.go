@@ -2,6 +2,11 @@ package main
 
 import "github.com/nlopes/slack"
 
+type tasK interface {
+	register(string) error
+	run() task
+}
+
 func taskJoke(rtm *slack.RTM, ev *slack.MessageEvent, params []string) {
 
 	if len(params) == 0 {
