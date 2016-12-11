@@ -25,10 +25,6 @@ func (l *lintResult) format() string {
 	return s
 }
 
-func (l *lintResult) extractCode() {
-	l.code = extract(l.path, l.line)
-}
-
 func newLintResult(a []string) (*lintResult, error) {
 
 	if len(a) < 2 {

@@ -8,6 +8,11 @@ import (
 	"github.com/natefinch/pie"
 )
 
+type Payload struct {
+	ID   int
+	Test string
+}
+
 var description = "Give you a few tips about coding rules - see `help` for more details"
 
 var help = []string{
@@ -59,7 +64,8 @@ func (api) Help(args string, response *string) error {
 	return nil
 }
 
-func (api) Run(args []string, response *string) error {
-	*response = strings.Join(commit, "\n")
+func (api) Run(args []string, response *Payload) error {
+	//*response = strings.Join(commit, "\n")
+	*response = Payload{1, "test"}
 	return nil
 }
